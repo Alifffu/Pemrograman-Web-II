@@ -1,0 +1,15 @@
+<?php
+function koneksiDatabase() {
+    $host = "localhost";
+    $user = "root";
+    $pass = ""; 
+    $db   = "perpustakaan";
+
+    $conn = mysqli_connect($host, $user, $pass, $db);
+
+    if (!$conn) {
+        die("Koneksi database gagal: " . mysqli_connect_error());
+    }
+    return $conn;
+}
+?>
